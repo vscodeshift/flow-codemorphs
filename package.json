@@ -1,9 +1,9 @@
 {
-  "name": "@vscodeshift/extension-skeleton",
+  "name": "flow-codemorphs",
   "version": "0.0.0-development",
-  "displayName": "@vscodeshift/extension-skeleton",
+  "displayName": "@vscodeshift/flow-codemorphs",
   "publisher": "vscodeshift",
-  "description": "skeleton for a VSCode extension for applying JSCodeshift transforms",
+  "description": "general purpose codemods for flow",
   "engines": {
     "vscode": "^1.40.0"
   },
@@ -11,14 +11,24 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.YOUR.COMMAND.HERE"
+    "onCommand:extension.makeExact",
+    "onCommand:extension.makeInexact",
+    "onCommand:extension.makeReadOnly"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "extension.YOUR.COMMAND.HERE",
-        "title": "YOUR TITLE HERE"
+        "command": "extension.makeExact",
+        "title": "Flow Codemorphs: make exact"
+      },
+      {
+        "command": "extension.makeInexact",
+        "title": "Flow Codemorphs: make inexact"
+      },
+      {
+        "command": "extension.makeReadOnly",
+        "title": "Flow Codemorphs: make read-only"
       }
     ]
   },
@@ -46,13 +56,13 @@
     ],
     "prepare": {
       "path": "semantic-release-vsce",
-      "packageVsix": "extension-skeleton.vsix"
+      "packageVsix": "flow-codemorphs.vsix"
     },
     "publish": [
       "semantic-release-vsce",
       {
         "path": "@semantic-release/github",
-        "assets": "extension-skeleton.vsix"
+        "assets": "flow-codemorphs.vsix"
       }
     ]
   },
@@ -100,19 +110,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vscodeshift/extension-skeleton.git"
+    "url": "https://github.com/vscodeshift/flow-codemorphs.git"
   },
   "keywords": [
-    "vscode",
+    "flow",
+    "flowtype",
+    "codemods",
     "jscodeshift",
-    "codemods"
+    "refactoring"
   ],
   "author": "Andy Edwards",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vscodeshift/extension-skeleton/issues"
+    "url": "https://github.com/vscodeshift/flow-codemorphs/issues"
   },
-  "homepage": "https://github.com/vscodeshift/extension-skeleton#readme",
+  "homepage": "https://github.com/vscodeshift/flow-codemorphs#readme",
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.6",

@@ -1,17 +1,22 @@
 import * as vscode from 'vscode'
 import applyTransform from '@vscodeshift/apply-jscodeshift'
 
-const transform = (): string | void | null | undefined => {
-  // REPLACE ME
-}
-
 export function activate(context: vscode.ExtensionContext): void {
-  const disposable = vscode.commands.registerCommand(
-    'extension.YOUR.COMMAND.HERE',
-    () => applyTransform(transform)
+  context.subscriptions.push(
+    vscode.commands.registerCommand('extension.makeExact', () =>
+      applyTransform(require('flow-codemorphs/makeExact'))
+    )
   )
-
-  context.subscriptions.push(disposable)
+  context.subscriptions.push(
+    vscode.commands.registerCommand('extension.makeInexact', () =>
+      applyTransform(require('flow-codemorphs/makeInexact'))
+    )
+  )
+  context.subscriptions.push(
+    vscode.commands.registerCommand('extension.makeReadOnly', () =>
+      applyTransform(require('flow-codemorphs/makeReadOnly'))
+    )
+  )
 }
 
 export function deactivate(): void {} // eslint-disable-line @typescript-eslint/no-empty-function
