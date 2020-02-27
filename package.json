@@ -1,7 +1,7 @@
 {
   "name": "flow-codemorphs",
   "version": "0.0.0-development",
-  "displayName": "@vscodeshift/flow-codemorphs",
+  "displayName": "Flow Codemorphs",
   "publisher": "vscodeshift",
   "description": "general purpose codemods for flow",
   "engines": {
