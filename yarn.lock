@@ -3753,6 +3753,14 @@ flatted@^2.0.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-2.0.1.tgz#69e57caa8f0eacbc281d2e2cb458d46fdb449e08"
   integrity sha512-a1hQMktqW9Nmqr5aktAux3JMNqaucxGcjtjWnZLHX7yyPCmlSV3M54nGYbqT8K+0GhF3NBgmJCc3ma+WOgX8Jg==
 
+flow-codemorphs@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/flow-codemorphs/-/flow-codemorphs-1.0.2.tgz#c9fa89fc0ca762cc495854e740b50f2627979343"
+  integrity sha512-H5+3BZrs0X5ujCZFWB/FhFGLl0hJUaxgMOkbNil0taKeac3QOCrYGlgJBVs2d70HSWJsFRJfllVbts9uzymolg==
+  dependencies:
+    "@babel/runtime" "^7.1.5"
+    jscodeshift-paths-in-range "^1.0.0"
+
 flow-parser@0.*:
   version "0.116.1"
   resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.116.1.tgz#2cded960269f702552feb5419c57c7c146ba171e"
@@ -5106,6 +5114,13 @@ jscodeshift-choose-parser@^1.0.1:
   dependencies:
     invalidate-require-cache "^1.0.0"
     resolve "^1.15.0"
+
+jscodeshift-paths-in-range@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/jscodeshift-paths-in-range/-/jscodeshift-paths-in-range-1.1.0.tgz#accc511afd807094f274a497f136b6d338efda8d"
+  integrity sha512-Hy/wwoLxXxLQXnvo2wBnqMXgvQODaU5EdjJjQp/5sPhbBujSJa+8K+jV75uJC+TnPeOM7ofdvQu72P6l/idn9g==
+  dependencies:
+    "@babel/runtime" "^7.1.5"
 
 jscodeshift@^0.7.0:
   version "0.7.0"
